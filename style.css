@@ -1,0 +1,144 @@
+html,body {
+    background-color: darkcyan;
+    width: 100%;
+    height: 100%;
+    padding: 0px;
+    margin: 0px;
+}
+/*----------------TOP TEXT------------------*/
+.topText{
+    display: flex;
+    height: 100%;
+}
+.leftText{
+    display: flex;
+    flex-direction: column;
+    font-size: large;
+    margin:2px;
+    padding:2px;
+    flex: 7;
+    height: 100%;
+}
+.rightText{
+    display: flex;
+    flex-direction: column;
+    font-size: large;
+    margin:2px;
+    padding:2px;
+    flex: 3;
+    height: 100%;
+    position: relative;
+}
+/*----------------columnColorsAndFonts-------------*/
+.firstTwoColumns{
+    border: 5px solid yellow;
+    background-color: #fff3a1;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+}
+.secondTwoColumns{
+    border: 5px solid aqua;
+    background-color: #afeeee;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+}
+.thirdTwoColumns{
+    border: 5px solid pink;
+    background-color: #ffd3da;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;   
+}
+/*----------------columnsContent--------------------------*/
+
+.columns{
+    display: flex;
+    flex: 1;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.columnChild{
+    display: flex;
+    flex-direction: column;
+    width:100%;
+    margin-top: 10px;
+    flex: 0 20%;
+    overflow: auto;
+}
+.productList{
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+.allButton{
+    display: flex;
+    justify-content: center;
+    width: 15%;
+}
+.removeButton{
+    display: flex;
+    justify-content: center;
+    width: 25%;
+}
+.modalButton{
+    display: flex;
+    justify-content: center;
+    width: 25%;
+}
+.allButtonSelectorFinalShoppingList{
+    display: flex;
+    width: 15%;
+    justify-content: center;
+}
+/*---------------AVATAR--------------*/
+.avatar{
+  position: absolute;
+  left:10px;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-size: cover;   
+  width: 1.2em;
+  height: 1.2em;
+  background-image: url(https://c402277.ssl.cf1.rackcdn.com/photos/6526/images/hero_small/sloth_%28c%29_Jorge_Salas_International_Expeditions.JPG?1394634201);
+  border-radius: 100%;
+}
+
+/*-------------rightTextShoppingList-----------*/
+
+.finalShoppingList{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    margin-top: 10px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    border: 5px solid mediumspringgreen;
+    background-color: #00e18b;
+    overflow: auto;
+}
+.finalProductList{
+    display: flex;
+    flex-direction: column;
+    margin-left: 5px;
+}
+
+
+@media screen and (max-width:1500px){
+    .columnChild{
+        flex: 0 45%;
+    }
+}
+@media screen and (max-width:1000px){
+    .columnChild{
+        flex: 0 90%;
+    }
+}
+
+/*---------------------------TASK BOX-----------------------------*/
+
+.taskBox{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    border: solid azure;
+}

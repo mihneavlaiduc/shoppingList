@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="topText">
+        <div class="leftText"> 
+            <div style="border:solid azure;font-family: Verdana, Geneva, Tahoma, sans-serif;  text-align: center; color:azure;"> Groceries </div>
+            <div>
+               <div class="taskBox">  
+                <button class="taskButtons" onclick="addContainerButton()" data-toggle="modal">ADD CONTAINER</button>
+                <button class="taskButtons" onclick="addProductButton()" data-toggle="modal">ADD PRODUCT</button>
+                </div>
+            </div>
+            <div class="columns"> 
+                <section class="columnChild firstTwoColumns">
+                    <p style="font-family: Verdana, Geneva, Tahoma, sans-serif; text-align: center;">  Meat & Fish </p>
+                    <section id = "meatContainer" class="productList">
+                    <label id = "SkinlessWhiteMeat"><input type="checkbox" name="Grains & Bread" value="Skinless white meat" class="meat"> Skinless white meat</label>
+                    <label id = "LeanCutsOfRedMeat"><input type="checkbox" name="Grains & Bread" value="Lean cuts of red meat" class="meat"> Lean cuts of red meat</label>
+                    <label id = "Fish"><input type="checkbox" name="Grains & Bread" value="Fish(tuna, salmon, mackerel)" class="meat"> Fish (tuna, salmon, mackerel)</label>
+                    </section>
+                    <button class="allButton" onclick="allButtonSelectorMeat()">All</button>
+                    <button class="removeButton" onclick="removeButtonSelectorMeat()">Remove</button>
+                    <button class="modalButton"> More...</button>
+                </section>
+                <section class="columnChild firstTwoColumns">
+                    <p style="font-family: Verdana, Geneva, Tahoma, sans-serif; text-align: center;"> Fresh Produce </p>
+                    <section id = "freshProduceContainer" class="productList">
+                    <label id = "OnionsGarlic"><input id = "OnionsGarlic" type="checkbox" name="Fresh Produce" value="Onions, garlic" class="fresh"> Onions, garlic</label>
+                    <label id = "ApplesOrangesBananas"><input id = "ApplesOrangesBananas" type="checkbox" name="Fresh Produce" value="Apples, oranges, bananas" class="fresh"> Apples, oranges, bananas</label>
+                </section>
+                <button class="allButton" onclick="allButtonSelectorFresh()">All</button>
+                <button class="removeButton" onclick="removeButtonSelectorFresh()">Remove</button>
+                </section>
+                <section class="columnChild secondTwoColumns">
+                    <p style="font-family: Verdana, Geneva, Tahoma, sans-serif; text-align: center;"> Grains & Bread</p> 
+                    <section id = "grainsBreadContainer" class="productList">
+                    <label id = "Pasta"><input id = "Pasta" type="checkbox" name="Grains & Bread" value="Pasta" class="grainsbread"> Pasta</label>
+                    <label id = "Rice"><input id = "Rice" type="checkbox" name="Grains & Bread" value="Rice" class="grainsbread"> Rice</label>
+                    <label id = "Bread"><input id = "Bread" type="checkbox" name="Grains & Bread" value="Bread" class="grainsbread"> Bread</label>
+                    <label id = "AllPurposeFlour"><input id = "AllPurposeFlour" type="checkbox" name="Grains & Bread" value="All-purpose flour" class="grainsbread"> All-purpose flour</label>
+                    <label id = "CornFlakes"><input id = "CornFlakes" type="checkbox" name="Grains & Bread" value="Corn flakes " class="grainsbread"> Corn flakes </label>
+                    <label id = "Oatmeal"><input id = "Oatmeal" type="checkbox" name="Grains & Bread" value="Oatmeal" class="grainsbread"> Oatmeal</label>
+                    <label id = "Granola"><input id = "Granola" type="checkbox" name="Grains & Bread" value="Granola" class="grainsbread"> Granola</label>
+                </section>
+                <button class="allButton" onclick="allButtonSelectorGrainsBread()">All</button>
+                <button class="removeButton" onclick="removeButtonSelectorGrainsBread()">Remove</button>
+                </section>
+                <section class="columnChild secondTwoColumns">
+                    <p style="font-family: Verdana, Geneva, Tahoma, sans-serif; text-align: center;"> Condiments </p>
+                    <section id = "condimentsContainer" class="productList">
+                    <label id = "SaltPepper"><input id = "SaltPepper" type="checkbox" name="Condiments" value="Salt & Pepper" class="condiments"> Salt & Pepper</label>
+                    <label id = "BasilOreganoCumin"><input id = "BasilOreganoCumin" type="checkbox" name="Condiments" value="Basil, oregano, cumin" class="condiments"> Basil, oregano, cumin</label>
+                    <label id = "Honey"><input id = "Honey" type="checkbox" name="Condiments" value="Honey" class="condiments"> Honey</label>
+                    <label id = "Vinegar"><input id = "Vinegar" type="checkbox" name="Condiments" value="Vinegar" class="condiments"> Vinegar</label>
+                    <label id = "KetchupMustard"><input id = "KetchupMustard" type="checkbox" name="Condiments" value="Ketchup & Mustard" class="condiments"> Ketchup & Mustard</label>
+                </section>
+                <button class="allButton" onclick="allButtonSelectorCondiments()">All</button>
+                <button class="removeButton" onclick="removeButtonSelectorCondiments()">Remove</button>
+                </section>
+                <section class="columnChild thirdTwoColumns">
+                    <p style="font-family: Verdana, Geneva, Tahoma, sans-serif; text-align: center;">Canned Goods</p> 
+                    <section id = "cannedGoodsContainer" class="productList">
+                    <label id = "KidneyBeans"><input id = "KidneyBeans" type="checkbox" name="Canned Goods" value="Kidney beans" class="cannedgoods"> Kidney beans</label>
+                    <label id = "LimaBeans"><input id = "LimaBeans" type="checkbox" name="Canned Goods" value="Lima beans" class="cannedgoods"> Lima beans</label>
+                    <label id = "BlackBeans"><input id = "BlackBeans" type="checkbox" name="Canned Goods" value="Black beans" class="cannedgoods"> Black beans</label>
+                    <label id = "ChoppedTomatoes"><input id = "ChoppedTomatoes" type="checkbox" name="Canned Goods" value="Chopped tomatoes" class="cannedgoods"> Chopped tomatoes</label>
+                    <label id = "Soups"><input id = "Soups" type="checkbox" name="Canned Goods" value="Soups" class="cannedgoods"> Soups</label>
+                    <label id = "Pepsi"><input id = "Pepsi" type="checkbox" name="Canned Goods" value="Pepsi" class="cannedgoods"> Pepsi</label>
+                </section>
+                <button class="allButton" onclick="allButtonSelectorCannedGoods()">All</button>
+                <button class="removeButton" onclick="removeButtonSelectorCannedGoods()">Remove</button>
+                </section>
+                <section class="columnChild thirdTwoColumns">
+                    <p style="font-family: Verdana, Geneva, Tahoma, sans-serif; text-align: center;">Dairy & Eggs</p>
+                    <section id = "dairyEggsContainer" class="productList">
+                    <label id = "Milk"><input id = "Milk" type="checkbox" name="Dairy & Eggs" value="Milk" class="dairyeggs"> Milk</label>
+                    <label id = "Eggs"><input id = "Eggs" type="checkbox" name="Dairy & Eggs" value="Eggs" class="dairyeggs"> Eggs</label>
+                    <label id = "Cheese"><input id = "Cheese" type="checkbox" name="Dairy & Eggs" value="Cheese" class="dairyeggs"> Cheese</label>
+                    <label id = "Yogurt"><input id = "Yogurt" type="checkbox" name="Dairy & Eggs" value="Yogurt" class="dairyeggs"> Yogurt</label>
+                </section>
+                <button class="allButton" onclick="allButtonSelectorDairyEggs()">All</button>
+                <button class="removeButton" onclick="removeButtonSelectorDairyEggs()">Remove</button>
+                </section>
+            </div>
+        </div>
+        <div class="rightText"> 
+            <div style="border:solid azure;font-family: Verdana, Geneva, Tahoma, sans-serif;text-align: center; color: azure"> <div class="avatar"></div>Mihnea's Shopping List</div>
+            <div id = "finalProductList" class = "finalShoppingList">
+                <button onclick="moveToListFunction()"> Move To List</button>
+                <button onclick="removeFromListFunction()"> Remove From List</button>
+                <button class="allButtonSelectorFinalShoppingList" onclick="allButtonSelectorFinalShoppingList()"> All </button>
+            </div>
+        </div>
+    </div>
+    <script src="./src/index.js" ></script>
+</body> 
+</html>
